@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern File Sharing Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">FileShare</div>
+        <div class="nav-links">
+            <a href="#" id="home-link">Home</a>
+            <a href="#" id="files-link">Files</a>
+            <a href="#" id="support-link">Support</a>
+            <div class="user-section">
+                <span id="user-status" class="status-indicator"></span>
+                <span id="username-display">Guest</span>
+                <div class="dropdown">
+                    <button class="dropbtn"><i class="fas fa-user"></i></button>
+                    <div class="dropdown-content">
+                        <a href="#" id="login-link">Login</a>
+                        <a href="#" id="register-link">Register</a>
+                        <a href="#" id="profile-link" style="display: none;">Profile</a>
+                        <a href="#" id="logout-link" style="display: none;">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Login Form -->
+        <div id="login-form" class="form-container" style="display: none;">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+
+        <!-- Registration Form -->
+        <div id="register-form" class="form-container" style="display: none;">
+            <h2>Register</h2>
+            <form id="registerForm">
+                <input type="text" placeholder="Username" required>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <input type="password" placeholder="Confirm Password" required>
+                <button type="submit">Register</button>
+            </form>
+        </div>
+
+        <!-- Profile Settings -->
+        <div id="profile-settings" class="form-container" style="display: none;">
+            <h2>Profile Settings</h2>
+            <form id="profileForm">
+                <input type="text" placeholder="Username" required>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="New Password (optional)">
+                <input type="file" id="profile-picture" accept="image/*">
+                <button type="submit">Save Changes</button>
+            </form>
+        </div>
+
+        <!-- File Upload Section -->
+        <div id="file-upload" class="form-container">
+            <h2>Upload Files</h2>
+            <form id="uploadForm">
+                <input type="file" id="file-input" multiple>
+                <button type="submit">Upload</button>
+            </form>
+        </div>
+
+        <!-- Online Users Section -->
+        <div id="online-users" class="users-container">
+            <h2>Online Users</h2>
+            <div id="users-list">
+                <!-- Users will be dynamically added here -->
+            </div>
+        </div>
+
+        <!-- Support Section -->
+        <div id="support-section" class="form-container" style="display: none;">
+            <h2>Technical Support</h2>
+            <form id="supportForm">
+                <textarea placeholder="Describe your issue..." required></textarea>
+                <button type="submit">Submit Ticket</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
