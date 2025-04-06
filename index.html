@@ -1,29 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modern File Sharing Platform</title>
+    <title>FileShare - Обмен файлами</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav class="navbar">
         <div class="logo">FileShare</div>
         <div class="nav-links">
-            <a href="#" id="home-link">Home</a>
-            <a href="#" id="files-link">Files</a>
-            <a href="#" id="support-link">Support</a>
+            <a href="#" id="home-link"><i class="fas fa-home"></i> Главная</a>
+            <a href="#" id="files-link"><i class="fas fa-file-upload"></i> Файлы</a>
+            <a href="#" id="support-link"><i class="fas fa-headset"></i> Поддержка</a>
             <div class="user-section">
                 <span id="user-status" class="status-indicator"></span>
-                <span id="username-display">Guest</span>
+                <span id="username-display">Гость</span>
                 <div class="dropdown">
                     <button class="dropbtn"><i class="fas fa-user"></i></button>
                     <div class="dropdown-content">
-                        <a href="#" id="login-link">Login</a>
-                        <a href="#" id="register-link">Register</a>
-                        <a href="#" id="profile-link" style="display: none;">Profile</a>
-                        <a href="#" id="logout-link" style="display: none;">Logout</a>
+                        <a href="#" id="login-link"><i class="fas fa-sign-in-alt"></i> Войти</a>
+                        <a href="#" id="register-link"><i class="fas fa-user-plus"></i> Регистрация</a>
+                        <a href="#" id="profile-link" style="display: none;"><i class="fas fa-user-cog"></i> Профиль</a>
+                        <a href="#" id="logout-link" style="display: none;"><i class="fas fa-sign-out-alt"></i> Выйти</a>
                     </div>
                 </div>
             </div>
@@ -33,50 +34,50 @@
     <div class="container">
         <!-- Login Form -->
         <div id="login-form" class="form-container" style="display: none;">
-            <h2>Login</h2>
+            <h2><i class="fas fa-sign-in-alt"></i> Вход в систему</h2>
             <form id="loginForm">
                 <input type="email" placeholder="Email" required>
-                <input type="password" placeholder="Password" required>
-                <button type="submit">Login</button>
+                <input type="password" placeholder="Пароль" required>
+                <button type="submit">Войти</button>
             </form>
         </div>
 
         <!-- Registration Form -->
         <div id="register-form" class="form-container" style="display: none;">
-            <h2>Register</h2>
+            <h2><i class="fas fa-user-plus"></i> Регистрация</h2>
             <form id="registerForm">
-                <input type="text" placeholder="Username" required>
+                <input type="text" placeholder="Имя пользователя" required>
                 <input type="email" placeholder="Email" required>
-                <input type="password" placeholder="Password" required>
-                <input type="password" placeholder="Confirm Password" required>
-                <button type="submit">Register</button>
+                <input type="password" placeholder="Пароль" required>
+                <input type="password" placeholder="Подтвердите пароль" required>
+                <button type="submit">Зарегистрироваться</button>
             </form>
         </div>
 
         <!-- Profile Settings -->
         <div id="profile-settings" class="form-container" style="display: none;">
-            <h2>Profile Settings</h2>
+            <h2><i class="fas fa-user-cog"></i> Настройки профиля</h2>
             <form id="profileForm">
-                <input type="text" placeholder="Username" required>
+                <input type="text" placeholder="Имя пользователя" required>
                 <input type="email" placeholder="Email" required>
-                <input type="password" placeholder="New Password (optional)">
+                <input type="password" placeholder="Новый пароль (необязательно)">
                 <input type="file" id="profile-picture" accept="image/*">
-                <button type="submit">Save Changes</button>
+                <button type="submit">Сохранить изменения</button>
             </form>
         </div>
 
         <!-- File Upload Section -->
         <div id="file-upload" class="form-container">
-            <h2>Upload Files</h2>
+            <h2><i class="fas fa-file-upload"></i> Загрузка файлов</h2>
             <form id="uploadForm">
                 <input type="file" id="file-input" multiple>
-                <button type="submit">Upload</button>
+                <button type="submit"><i class="fas fa-upload"></i> Загрузить</button>
             </form>
         </div>
 
         <!-- Online Users Section -->
         <div id="online-users" class="users-container">
-            <h2>Online Users</h2>
+            <h2><i class="fas fa-users"></i> Пользователи онлайн</h2>
             <div id="users-list">
                 <!-- Users will be dynamically added here -->
             </div>
@@ -84,10 +85,10 @@
 
         <!-- Support Section -->
         <div id="support-section" class="form-container" style="display: none;">
-            <h2>Technical Support</h2>
+            <h2><i class="fas fa-headset"></i> Техническая поддержка</h2>
             <form id="supportForm">
-                <textarea placeholder="Describe your issue..." required></textarea>
-                <button type="submit">Submit Ticket</button>
+                <textarea placeholder="Опишите вашу проблему..." required></textarea>
+                <button type="submit"><i class="fas fa-paper-plane"></i> Отправить</button>
             </form>
         </div>
     </div>
